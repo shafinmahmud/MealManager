@@ -21,6 +21,7 @@ public class DBConfiguration {
         String path = DBConfiguration.class.getProtectionDomain().getCodeSource().getLocation().getPath();
         String decodedPath = URLDecoder.decode(path, "UTF-8");
         
+        System.out.println(decodedPath);
         SQLite_DATABASE_URL = "jdbc:sqlite:"+decodedPath+"meal_manager.sqlite";
     }
     

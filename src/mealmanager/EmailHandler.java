@@ -25,9 +25,10 @@ public class EmailHandler {
 
     /**
      * load and sets mail sets mail configuration
+     *
      * @param userMail
      * @param passWord
-     * @return 
+     * @return
      */
     public Properties configProperty(String userMail, String passWord) {
 
@@ -44,6 +45,7 @@ public class EmailHandler {
 
     /**
      * sends mail
+     *
      * @param smtpProperties
      * @param toAddress
      * @param subject
@@ -90,11 +92,7 @@ public class EmailHandler {
             for (File aFile : attachFiles) {
                 MimeBodyPart attachPart = new MimeBodyPart();
 
-                try {
-                    attachPart.attachFile(aFile);
-                } catch (IOException ex) {
-                    throw ex;
-                }
+               // attachPart.attachFile(aFile);
 
                 multipart.addBodyPart(attachPart);
             }
